@@ -11,29 +11,6 @@
   });
 </script>
 
-<!-- <table>
-  <thead>
-    <tr>
-      <td>Name</td>
-      <td>Favorite Color</td>
-      <td>Favorite Number</td>
-    </tr>
-  </thead>
-  <tbody>
-    {#each tenderat as { attributes }}
-      <tr>
-        <td>{attributes.nr}</td>
-        <td>{attributes.autoriteti_prokurues}</td>
-        <td><a href={attributes.url}>{attributes.objekti}</a></td>
-        <td>{attributes.kontraktues}</td>
-        <td>{attributes.vlera_limit}</td>
-        <td>{attributes.statusi}</td>
-        <td>{attributes.vlera_fituese}</td>
-      </tr>
-    {/each}
-  </tbody>
-</table> -->
-
 <div class="mdc-data-table">
   <div class="mdc-data-table__table-container">
     <table class="mdc-data-table__table" aria-label="Dessert calories">
