@@ -5,7 +5,9 @@
 	import { tenderat, tenderatAdf, setTenderat, setTenderatAdf } from '$lib/stores/tenderat.store';
 
 	onMount(async () => {
-		await setTenderat();
+		if($tenderat.length === 0) {
+			await setTenderat();
+		};
 	});
 </script>
 

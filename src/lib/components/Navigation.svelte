@@ -1,7 +1,10 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
 	import { authenticated, logoutUser, loggedInUserProfile } from '$lib/stores/auth.store';
-
-
+	export const logout = async () => {
+		await logoutUser();
+		goto('/');
+	};
 </script>
 
 <div class="navbar bg-base-100">
@@ -29,7 +32,7 @@
 				>
 					<li>
 						<!-- svelte-ignore a11y-missing-attribute -->
-						<a class="justify-between">
+						<a href="/profile" class="justify-between">
 							Profile
 							<span class="badge">New</span>
 						</a>
@@ -37,7 +40,7 @@
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<li><a>Settings</a></li>
 					<!-- svelte-ignore a11y-missing-attribute -->
-					<li><a on:click={logoutUser}>Logout</a></li>
+					<li><a on:click={logout}>Logout</a></li>
 				</ul>
 			</div>
 		{:else}
