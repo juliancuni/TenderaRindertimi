@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { browser } from '$app/env';
+	import Table from '$lib/components/Table.svelte';
+	import { tenderat, tenderatAdf, setTenderat, setTenderatAdf } from '$lib/stores/tenderat.store';
+
+	onMount(async () => {
+		await setTenderat();
+	});
+</script>
+
+<Table bind:tenderatRikonstruksioni={$tenderat} />
