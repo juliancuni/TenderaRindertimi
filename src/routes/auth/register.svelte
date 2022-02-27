@@ -21,10 +21,22 @@
 
 <h1 class="text-4xl font-black mb-4">[X]</h1>
 
-<form class="form-control" on:submit|preventDefault={login}>
+<form on:submit|preventDefault={login}>
 	<div class="mb-4 relative">
 		<label class="block text-sm font-medium"
-			>Username/Email
+			>Emri i plote
+			<input type="text" class="input input-bordered w-full" bind:value={identity} />
+		</label>
+	</div>
+	<div class="mb-4 relative">
+		<label class="block text-sm font-medium"
+			>Username
+			<input type="text" class="input input-bordered w-full" bind:value={identity} />
+		</label>
+	</div>
+	<div class="mb-4 relative">
+		<label class="block text-sm font-medium"
+			>Email
 			<input type="text" class="input input-bordered w-full" bind:value={identity} />
 		</label>
 	</div>
@@ -34,5 +46,11 @@
 			<input type="password" class="input input-bordered w-full" bind:value={password} />
 		</label>
 	</div>
-	<button type="submit" class="btn btn-block mb-4" class:loading>Login</button>
+	<div class="mb-4 ">
+		<label class="block text-sm font-medium"
+			>Repeat Password
+			<input type="password" class="input input-bordered w-full" bind:value={password} />
+		</label>
+	</div>
+	<button type="submit" class="btn btn-block mb-4" class:loading>Register</button>
 </form>

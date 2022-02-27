@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { login, getLoggedInUser, userProfile, logout } from '../parse/auth.service';
+import { login, getLoggedInUser, getLoggedInUserProfile, logout } from '../parse/auth.service';
 
 export const authenticated = writable(false);
 export const loggedInUser = writable(null);
@@ -29,7 +29,7 @@ export const logoutUser = async () => {
 };
 
 export const getUserProfile = async () => {
-	const profile = await userProfile();
+	const profile = await getLoggedInUserProfile();
 	if (profile) {
 		loggedInUserProfile.set(profile);
 	}

@@ -6,24 +6,23 @@
 		goto('/');
 	};
 </script>
-
-<div class="navbar bg-base-100">
+<div class="navbar bg-neutral-content shadow-sm">
 	<div class="flex-1">
 		<a href="/" class="btn btn-ghost normal-case text-xl">[X]</a>
 	</div>
 	<div class="flex-none gap-2">
 		{#if $authenticated}
-			<div class="form-control">
+			<!-- <div class="form-control">
 				<input
 					type="text"
 					placeholder="Search"
 					class="input input-bordered input-sm w-full max-w-xs"
 				/>
-			</div>
+			</div> -->
 			<div class="dropdown dropdown-end">
 				<span tabindex="0" class="btn btn-ghost btn-circle avatar">
 					<div class="w-10 rounded-full">
-						<img src={$loggedInUserProfile?.attributes?.avatar?._url} alt="avatar" />
+						<img src={$loggedInUserProfile.attributes.avatar._url} alt="avatar" />
 					</div>
 				</span>
 				<ul
@@ -34,11 +33,11 @@
 						<!-- svelte-ignore a11y-missing-attribute -->
 						<a href="/profile" class="justify-between">
 							Profile
-							<span class="badge">New</span>
+							<!-- <span class="badge">New</span> -->
 						</a>
 					</li>
 					<!-- svelte-ignore a11y-missing-attribute -->
-					<li><a>Settings</a></li>
+					<!-- <li><a>Settings</a></li> -->
 					<!-- svelte-ignore a11y-missing-attribute -->
 					<li><a on:click={logout}>Logout</a></li>
 				</ul>

@@ -1,12 +1,12 @@
 <script lang="ts">
-	export let tenderatRikonstruksioni;
+	export let tenderatRikonstruksioni: any;
 </script>
 
 <div class="overflow-x-auto">
 	{#await tenderatRikonstruksioni}
 		Loading....
 	{:then tenderat}
-		<table class="table table-compact">
+		<table class="table table-fixed">
 			<thead>
 				<tr>
 					<th>Nr.</th>
