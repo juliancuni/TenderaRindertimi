@@ -17,7 +17,7 @@
 	loading...
 {:then _}
 	<Navigation />
-	<main class="container mx-auto">
+	<main>
 		<slot />
 	</main>
 {/await}
